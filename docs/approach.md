@@ -43,7 +43,7 @@ The project is built by agents, deliberately. The aim is high output quality at 
 - **Review is a separate agent.** The author does not approve their own work. Design docs get T1 review. Routine code gets T2 review.
 - **Escalate upward, never sideways in silence.** A T2/T3 agent that hits an ambiguity records an escalation and stops on that item. It does not guess and does not widen scope.
 - **Record the tier.** Task records in this project (and, once built, in the product itself) note which tier did the work, so we can measure whether the strategy is working.
-- **Parallelise independent work.** Design docs, research spikes, and later implementation tasks that do not depend on each other run concurrently.
+- **Partition, then parallelise.** Work runs concurrently only when each task owns a disjoint set of concepts (see the Concept ownership map in `docs/design/README.md`). Shared concepts are stubbed by their owner first. Competing designs for one concept are permitted as a deliberate validation technique for high-risk decisions, declared up front with a convergence date and synthesiser, and used sparingly. Accidental duplication, or divergence that never converges, is the failure; see `docs/design/reviews/2026-09-14-retro-duplicate-identity.md`.
 - **Dogfood.** Once the product can hold a plan, this project's own plan lives in it.
 
 ### Sub-agent roles

@@ -1,0 +1,9 @@
+[package]
+name = "sdk-spike"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+surrealdb = { version = "3", features = ["kv-mem", "kv-rocksdb"] }
+tokio = { version = "1", features = ["full"] }
